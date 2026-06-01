@@ -37,7 +37,7 @@
             "type": "Microsoft.Sql/servers/databases",
             "apiVersion": "2017-03-01-preview",
             "name": "[concat(variables('sqlServerName'), '/AZ500LabDb')]",
-            "location": "location": "[resourceGroup().location]"
+            "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Sql/servers', variables('sqlServerName'))]"
             ],
@@ -50,7 +50,7 @@
                 "collation": "SQL_Latin1_General_CP1_CI_AS",
                 "maxSizeBytes": 2147483648,
                 "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
-                "zoneRedundant": false,
+                "zoneRedundant": false
             }
         }
     ]
